@@ -1,0 +1,169 @@
+﻿@model IEnumerable<TemplateBaseV01.Models.Pagamento>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index corpo do projeto</h2>
+
+@*<p>@await DoSomething("hello", "world")</p>*@
+
+<p>Last week this time: @(DateTime.Now - TimeSpan.FromDays(7))</p>
+
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <p class="navbar-text">Teste Bootstrap</p>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <table class="table table-bordered table-condensed table-striped">
+                <thead>
+                    <tr>
+                        <th>header</th>
+                        <th>header</th>
+                        <th>header</th>
+                        <th>header</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>data</td>
+                        <td>data</td>
+                        <td>data</td>
+                        <td>data</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <form role="form">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <input type="file" id="exampleInputFile">
+                    <p class="help-block">Example block-level help text here.</p>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Check me out
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@*@{
+    var total = 0;
+    var totalMessage = "";
+    if (IsPost)
+    {
+
+        // Retrieve the numbers that the user entered.
+        var num1 = Request["text1"];
+        var num2 = Request["text2"];
+
+        // Convert the entered strings into integers numbers and add.
+        total = num1.AsInt() + num2.AsInt();
+        totalMessage = "Total = " + total;
+    }
+}
+
+<p>    Digite dois números inteiros e clique em <strong>Add</strong>.</p>
+<form action="" method="post">
+    <p>
+        <label for="text1">First Number:</label>
+        <input type="text" name="text1" />
+    </p>
+    <p>
+        <label for="text2">Second Number:</label>
+        <input type="text" name="text2" />
+    </p>
+    <p><input type="submit" value="Add" /></p>
+</form>*@
+
+@*<p>@totalMessage</p>
+
+@foreach (var item in Model)
+{
+    <div>
+        @item.cartao
+        <hr />
+    </div>
+}*@
+
+
+@*@{
+    // Embedding the value of a variable into HTML markup.
+    <p>@greeting, friends!</p>
+
+    // Using variables as part of an inline expression.
+    <p>The predicted annual total is: @( monthlyTotal * 12)</p>
+
+    // Displaying the page URL with a variable.
+    <p>The URL to this page is: @myPath</p>
+}
+
+@for (var i = 10; i < 21; i++)
+{
+    <p>Line #: @i</p>
+}
+
+<ul>
+    @foreach (var myItem in Request.ServerVariables)
+    {
+        <li>@myItem</li>
+    }
+</ul>
+
+@{
+    var countNum = 0;
+    while (countNum < 50)
+    {
+        countNum += 1;
+        <p>Line #@countNum: </p>
+    }
+}
+
+@{
+    var path = Request.FilePath;
+}
+
+@{
+    var path1 = this.Request.FilePath;
+}
+@{
+    // Access the page's Request object to retrieve the Url.
+    var pageUrl = this.Request.Url;
+}
+<a href="@pageUrl">My page</a>*@
+
+@*@{
+    string[] teamMembers = { "Matt", "Joanne", "Robert", "Nancy" };
+    <p>The number of names in the teamMembers array: @teamMembers.Length </p>
+    <p>Robert is now in position: @Array.IndexOf(teamMembers, "Robert")</p>
+    <p>The array item at position 2 (zero-based) is @teamMembers[2]</p>
+    <h3>Current order of team members in the list</h3>
+    foreach (var person in teamMembers)
+    {
+        <p>@person</p>
+    }
+    <h3>Reversed order of team members in the list</h3>
+    Array.Reverse(teamMembers);
+    foreach (var reversedItem in teamMembers)
+    {
+        <p>@reversedItem</p>
+    }
+}*@
+

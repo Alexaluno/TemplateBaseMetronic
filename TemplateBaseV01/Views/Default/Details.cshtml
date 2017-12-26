@@ -1,0 +1,95 @@
+﻿@model TemplateBaseV01.Models.Pagamento
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Metronic/_Layout.cshtml";
+}
+
+<ul class="page-breadcrumb breadcrumb"></ul>
+<div class="page-content-inner">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet light bordered">
+
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="icon-equalizer font-blue-hoki"></i>
+                        <span class="caption-subject font-blue-hoki bold uppercase">Cadastro de estado</span>
+
+                    </div>
+                </div>
+
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="#" id="form_sample_1" class="horizontal-form">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-actions left">
+                                    <button type="submit" class="btn blue">
+                                        <i class="fa fa-check"></i> Save
+                                    </button>
+                                    <button type="button" class="btn default"> Cancel</button>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-actions right">
+                                    <button type="button" onclick="location.href='table_ekho.html'" class="btn default"> Sair</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-body">
+
+                            <div class="alert alert-danger display-hide">
+                                <button class="close" data-close="alert"></button>
+                                Você tem alguns erros de formulário. Por favor, verifique abaixo.
+                            </div>
+
+                            <div class="alert alert-success display-hide">
+                                <button class="close" data-close="alert"></button>
+                                Sua validação de formulário é bem sucedida!
+                            </div>
+
+                            <h3 class="form-section">Informações</h3>
+
+                            <div class="row">
+                                <div class="col-md-2">
+
+                                    <div class="form-group">
+                                        <label class="control-label">
+                                            Sigla
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="input-icon right">
+                                            <i class="fa"></i>
+                                            <input type="text" name="sigla" data-required="2" class="form-control" placeholder="Sigla">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/span-->
+                                <div class="col-md-10">
+
+                                    <div class="form-group">
+                                        <label class="control-label">
+                                            Nome do estado
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="input-icon right">
+                                            <i class="fa"></i>
+                                            <input type="text" name="estado" data-required="100" class="form-control" placeholder="Nome do estado">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/span-->
+                            </div>
+                            <!--/row-->
+                        </div>
+                    </form>
+                    <!-- END FORM-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
